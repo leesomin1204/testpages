@@ -1,0 +1,122 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  background: #5b4636 url('bg.jpg') no-repeat center/cover;
+  color: white;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About */
+.about {
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Skills */
+.skills {
+  background: #fbc531;
+}
+
+.skills-box {
+  background: #f5e6b8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.skills-box span {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Archiving */
+.archiving {
+  background: #222;
+  color: white;
+}
+
+.archiving-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.archiving-grid a {
+  background: #333;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Projects */
+.projects {
+  background: #f4f4f4;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #e67e22;
+  font-weight: bold;
+}
