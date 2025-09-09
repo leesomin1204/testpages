@@ -17,38 +17,81 @@ section {
 
 /* Hero */
 .hero {
-  background: #5b4636 url('bg.jpg') no-repeat center/cover;
+  background: #5b4636;
   color: white;
-  height: 400px;
+  min-height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 60px 20px;
 }
 
-.hero-content {
+.hero-text {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.hero .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  background: #e74c3c;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.about-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* About */
-.about {
-  background: #fff;
+.about-subtitle {
+  font-size: 18px;
+  color: #eee;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* About Box */
+.about-box {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* About 제목 스타일 */
+.about-heading {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* 프로필 네모 */
+.profile-photo {
+  width: 200px;
+  height: 250px;
+  background: #ddd;
+  border-radius: 8px;
+}
+
+/* 오른쪽 정보 */
+.profile-info {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.profile-info .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* Skills */
