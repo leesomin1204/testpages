@@ -4,15 +4,6 @@ document.addEventListener("click", (e) => {
     const modalId = e.target.getAttribute("data-modal");
     const modal = document.getElementById(modalId);
     modal.classList.add("active");
-
-    // 🔥 모달 열릴 때 첫 번째 이미지로 초기화
-    const firstImg = modal.querySelector(".slides img");
-    if (firstImg) {
-      modal
-        .querySelectorAll(".slides img")
-        .forEach((img) => img.classList.remove("active"));
-      firstImg.classList.add("active");
-    }
   }
 
   if (e.target.matches(".modal .close")) {
@@ -39,51 +30,43 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// 이미지 슬라이더 (prev/next)
-document.addEventListener("click", (e) => {
-  if (e.target.matches(".next, .prev")) {
-    const slider = e.target.closest(".image-slider");
-    const slides = slider.querySelectorAll(".slides img");
-    const counter = slider.querySelector(".slide-counter");
-    if (slides.length === 0) return;
+// 타이핑 효과 (스크롤 시 재실행 포함)
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.querySelector(".home-title");
+  if (!el) return;
 
-    let index = Array.from(slides).findIndex(img =>
-      img.classList.contains("active")
-    );
+  const text = el.getAttribute("data-text"); // 한 줄 문자열
+  const highlight = "이소민";
 
-    slides[index].classList.remove("active");
+  function typeText() {
+    el.textContent = ""; // 초기화
+    let i = 0;
 
-    if (e.target.classList.contains("next")) {
-      index = (index + 1) % slides.length;
-    } else {
-      index = (index - 1 + slides.length) % slides.length;
-    }
-
-    slides[index].classList.add("active");
-
-    // 🔥 페이지 번호 업데이트
-    if (counter) {
-      counter.textContent = `${index + 1} / ${slides.length}`;
-    }
-  }
-});
-
-// 모달 열릴 때 항상 첫 장 + 페이지 번호 초기화
-document.addEventListener("click", (e) => {
-  if (e.target.matches("[data-modal]")) {
-    const modalId = e.target.getAttribute("data-modal");
-    const modal = document.getElementById(modalId);
-    modal.classList.add("active");
-
-    const slides = modal.querySelectorAll(".slides img");
-    const counter = modal.querySelector(".slide-counter");
-    if (slides.length > 0) {
-      slides.forEach(img => img.classList.remove("active"));
-      slides[0].classList.add("active");
-
-      if (counter) {
-        counter.textContent = `1 / ${slides.length}`;
+  function type() {
+        if (i < text.length) {
+          const char = text.charAt(i);
+          // highlight 범위에 포함되는 글자면 strong 태그 적용
+          if (i >= text.indexOf(highlight) && i < text.indexOf(highlight) + highlight.length) {
+            el.innerHTML += `<strong>${char}</strong>`;
+          } else {
+            el.innerHTML += char;
+          }
+          i++;
+          setTimeout(type, 150);
+        }
       }
-    }
+
+    type();
   }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) typeText();
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  observer.observe(el);
 });

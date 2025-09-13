@@ -15,70 +15,112 @@ section {
   text-align: center;
 }
 
-/* Hero */
-.hero {
+/* Navigation Header */
+.main-header {
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #e67e22;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #dcdcdc; /* 연그레이 */
+  height: 100px;
+  margin-top: 40px;
+}
+
+/* Home Section */
+.home {
   background: #5b4636;
   color: white;
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
-}
-
-.hero-text {
+  padding: 80px 20px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
-.about-title {
-  font-size: 32px;
+.home-text {
+  margin-bottom: 40px;
+}
+
+.home-title {
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.home-title strong {
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
-.about-subtitle {
-  font-size: 18px;
+.home-subtitle {
+  font-size: 20px;
   color: #eee;
+  line-height: 1.6;
 }
 
-/* About Box */
-.about-box {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
-  border-radius: 12px;
-  padding: 30px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+/* About Section */
+.about {
+  background: #f5f5f5;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
 }
 
 .about-wrapper {
   display: flex;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-/* About 제목 스타일 */
-.about-heading {
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* 프로필 네모 */
 .profile-photo {
-  width: 200px;
-  height: 250px;
-  background: #ddd;
+  width: 220px;
+  height: 280px;
   border-radius: 8px;
+  background: #ddd;
 }
 
-/* 오른쪽 정보 */
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -94,48 +136,66 @@ section {
   vertical-align: middle;
 }
 
+
 /* Skills */
 .skills {
   background: #fbc531;
+  padding: 40px 20px;
 }
 
-.skills-box {
-  background: #f5e6b8;
+.skill-category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
   gap: 10px;
-  padding: 20px;
-  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.skills-box span {
-  background: white;
+.skill-category h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill-category span.tech {
+  display: inline-block;
   padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-/* Archiving */
-.archiving {
-  background: #222;
-  color: white;
-}
-
-.archiving-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.archiving-grid a {
-  background: #333;
-  padding: 15px 25px;
   border-radius: 8px;
-  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
   color: white;
 }
+
+/* Frontend */
+.tech.react { background-color: #61dafb; color: #000; }
+.tech.nextjs { background-color: #000; }
+.tech.javascript { background-color: #f7df1e; color: #000; }
+.tech.typescript { background-color: #3178c6; }
+.tech.html5 { background-color: #e34c26; }
+.tech.css3 { background-color: #1572b6; }
+
+/* Backend */
+.tech.springboot { background-color: #6db33f; }
+.tech.jpa { background-color: #005caa; }
+.tech.restful { background-color: #ff6f61; }
+.tech.mysql { background-color: #4479a1; }
+.tech.java { background-color: #007396; }
+.tech.python { background-color: #3776ab; }
+
+/* DevOps / Infra */
+.tech.aws { background-color: #ff9900; }
+.tech.githubpages { background-color: #24292f; }
+.tech.docker { background-color: #0db7ed; color: #000; }
+.tech.dockerhub { background-color: #384d54; }
+
+/* Tools & IDEs */
+.tech.git { background-color: #f05033; }
+.tech.github { background-color: #24292f; }
+.tech.vscode { background-color: #007acc; }
+.tech.intellij { background-color: #000; }
+
+/* AI & API */
+.tech.yolo { background-color: #ffcc00; color: #000; }
 
 /* Projects */
 .projects {
@@ -207,7 +267,6 @@ section {
 }
 
 .btn-readme { background: #3498db; }
-.btn-image { background: #e67e22; }
 
 /* 모달 */
 .modal {
@@ -242,7 +301,7 @@ section {
   cursor: pointer;
 }
 
-/* README 모달 전용 */
+/* README 모달 */
 .readme-modal {
   text-align: left; 
   align-items: flex-start;
@@ -251,7 +310,6 @@ section {
   overflow-y: auto;
 }
 
-/* 제목 스타일 */
 .readme-modal h2 {
   font-size: 22px;
   font-weight: bold;
@@ -284,61 +342,3 @@ section {
 .readme-modal li {
   margin-bottom: 6px;
 }
-
-/* 이미지 슬라이더 */
-.image-slider {
-  position: relative;
-  text-align: center;
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.slides {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slides img {
-  max-width: 100%;
-  max-height: 100%;
-  display: none;
-  object-fit: contain;
-}
-
-.slides img.active {
-  display: block;
-}
-
-/* 페이지 번호 */
-.slide-counter {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 5px 12px;
-  border-radius: 12px;
-  font-size: 15px;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-

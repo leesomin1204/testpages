@@ -3,83 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>포트폴리오</title>
+  <title>Somin Lee's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1 class="about-title">안녕하세요 이소민 입니다.</h1>
-      <p class="about-subtitle">자기소개</p>
-    </div>
-
-    <div class="about-box">
-      <h2 class="about-heading">ABOUT</h2>
-      <div class="about-wrapper">
-        <!-- 왼쪽 프로필 -->
-        <div class="profile-photo">
-          <img src="images/profile.jpg" alt="프로필 사진">
-        </div>
-
-        <!-- 오른쪽 정보 -->
-        <div class="profile-info">
-          <div>
-            <img src="images/profile.png" alt="사람 아이콘" class="icon">
-            이름: 이소민
-          </div>
-          <div>
-            <img src="images/mobile.png" alt="연락처 아이콘" class="icon">
-            연락처: 010-7749-1017
-          </div>
-          <div>
-            <img src="images/email.png" alt="이메일 아이콘" class="icon">
-            이메일: dlthals1204@gmail.com
-          </div>
-          <div>
-            <img src="images/location.png" alt="주소 아이콘" class="icon">
-            주소: 인천시 미추홀구
-          </div>
-          <div>
-            <img src="images/github.png" alt="깃허브 아이콘" class="icon">
-            GitHub: github.com/leesomin1204
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Header / Navigation -->
+  <header class="main-header">
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Skills -->
-  <section class="skills">
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1 class="home-title" data-text="안녕하세요 이소민입니다."></h1>
+      <p class="home-subtitle">
+        공간 UX 설계 경험을 바탕으로,<br>
+        이제는 디지털 환경에서 더 나은 사용자 경험을 만들어가고 있습니다.<br>
+        직관적이고 효율적인 인터페이스 구현에 집중하며
+        끊임없이 성장하는 개발자가 되고 싶습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="about-heading">ABOUT</h2>
+    <div class="about-wrapper">
+      <div class="profile-photo">
+        <img src="images/profile.jpg" alt="프로필 사진">
+      </div>
+      <div class="profile-info">
+        <div><img src="images/profile.png" alt="사람 아이콘" class="icon"> 이름: 이소민</div>
+        <div><img src="images/mobile.png" alt="연락처 아이콘" class="icon"> 연락처: 010-7749-1017</div>
+        <div><img src="images/email.png" alt="이메일 아이콘" class="icon"> 이메일: dlthals1204@gmail.com</div>
+        <div><img src="images/location.png" alt="주소 아이콘" class="icon"> 주소: 인천시 미추홀구</div>
+        <div><img src="images/github.png" alt="깃허브 아이콘" class="icon"> GitHub: github.com/leesomin1204</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
     <h2>💡 SKILLS</h2>
-    <div class="skills-box">
-      <span>JavaScript</span>
-      <span>TypeScript</span>
-      <span>React</span>
-      <span>Next.js</span>
-      <span>Node.js</span>
-      <span>Spring Boot</span>
-      <span>MySQL</span>
-      <span>AWS</span>
+    <div class="skill-category">
+      <h3>Frontend:</h3>
+      <span class="tech react">React</span>
+      <span class="tech nextjs">Next.js</span>
+      <span class="tech javascript">JavaScript</span>
+      <span class="tech typescript">TypeScript</span>
+      <span class="tech html5">HTML5</span>
+      <span class="tech css3">CSS3</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>Backend:</h3>
+      <span class="tech springboot">Spring Boot</span>
+      <span class="tech jpa">JPA/Hibernate</span>
+      <span class="tech restful">RESTful API</span>
+      <span class="tech mysql">MySQL</span>
+      <span class="tech java">Java</span>
+      <span class="tech python">Python</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>DevOps / Infra:</h3>
+      <span class="tech aws">AWS</span>
+      <span class="tech githubpages">GitHub Pages</span>
+      <span class="tech docker">Docker</span>
+      <span class="tech dockerhub">Docker Hub</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>Tools & IDEs:</h3>
+      <span class="tech git">Git</span>
+      <span class="tech github">GitHub</span>
+      <span class="tech vscode">VSCode</span>
+      <span class="tech intellij">IntelliJ</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>AI & API:</h3>
+      <span class="tech yolo">YOLO API</span>
     </div>
   </section>
 
-  <!-- Archiving -->
-  <section class="archiving">
-    <h2>📦 ARCHIVING</h2>
-    <div class="archiving-grid">
-      <a href="https://github.com/leesomin1204">GitHub</a>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects">
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
     <h2>🚀 PROJECTS</h2>
     <div class="projects-grid">
+      <!-- 각 프로젝트 카드 -->
       <div class="project-card">
         <a href="https://vinllage.xyz/">
-        <div class="project-image" style="background-image: url('images/main2.gif');"></div>
+          <div class="project-image" style="background-image: url('images/vinllageMain.gif');"></div>
         </a>
         <h3>Vinllage</h3>
         <p>AI 기반 카메라 인식을 통해 쓰레기 카테고리를 안내하는 친환경 웹 서비스</p>
@@ -90,7 +113,7 @@
 
       <div class="project-card">
         <a href="https://maengle.xyz/">
-        <div class="project-image" style="background-image: url('images/maengle.png');"></div>
+          <div class="project-image" style="background-image: url('images/maengle.png');"></div>
         </a>
         <h3>맹글맹글</h3>
         <p>전이 학습 기반 자연어 처리 AI로 다양한 대화 경험을 제공하는 채팅 웹 서비스</p>
@@ -128,12 +151,15 @@
     </div>
   </section>
 
-  <!-- 모달 파일 불러올 자리 -->
-  <div id="modals"></div>
+  <!-- Footer Section -->
+  <footer class="main-footer"></footer>
 
+  <!-- README modal -->
+  <div id="modals"></div>
+  
+  <!-- 스크립트 로드 --> 
   <script src="script.js"></script>
   <script>
-    // modals.html 불러오기
     fetch("modals.html")
       .then(res => res.text())
       .then(html => {
